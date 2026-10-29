@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sahil Telote — Cybersecurity &amp; Cloud Security Analyst</title>
+<style>
+:root{--bg:#f4f7fb;--surf:#fff;--tx:#0d1b2a;--mut:#5b6b7e;--ac:#0a7cff;--ac2:#00a37a;--bd:#d9e2ec;--glow:rgba(10,124,255,.18);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#070b14;--surf:#0e1626;--tx:#e6edf7;--mut:#8a9bb2;--ac:#3da5ff;--ac2:#2ee6a6;--bd:#1b2a42;--glow:rgba(61,165,255,.22);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#070b14;--surf:#0e1626;--tx:#e6edf7;--mut:#8a9bb2;--ac:#3da5ff;--ac2:#2ee6a6;--bd:#1b2a42;--glow:rgba(61,165,255,.22);color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(64px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+canvas#bg{position:fixed;inset:0;width:100%;height:100%;z-index:0;opacity:.55;pointer-events:none}
+main,nav,footer{position:relative;z-index:1}
+.mono{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--bd);z-index:50}
+nav b{font-family:ui-monospace,Menlo,monospace;color:var(--ac)}
+nav .l{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav a{color:var(--mut);text-decoration:none;font-size:13px;padding:6px 9px;border-radius:8px;white-space:nowrap}
+nav a:hover{color:var(--tx);background:var(--glow)}
+#th{background:none;border:1px solid var(--bd);color:var(--tx);border-radius:10px;width:36px;height:36px;cursor:pointer;font-size:16px;flex:none;margin-left:6px}
+section{max-width:1040px;margin:0 auto;padding:72px 18px 8px}
+h2{font-size:clamp(24px,5vw,34px);margin:0 0 6px}
+.tag{color:var(--ac2);font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin:0}
+#hero{min-height:92vh;display:flex;flex-direction:column;justify-content:center;padding-top:96px}
+.hi{color:var(--ac2);font-size:14px}
+h1{font-size:clamp(38px,10vw,76px);line-height:1.02;margin:10px 0;letter-spacing:-.02em;background:linear-gradient(100deg,var(--tx) 30%,var(--ac) 70%,var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% auto;animation:sh 6s linear infinite}
+@keyframes sh{to{background-position:200% center}}
+.ty{font-size:clamp(16px,3.6vw,24px);min-height:1.6em;color:var(--mut)}
+.ty i{display:inline-block;width:2px;height:1em;background:var(--ac);margin-left:2px;vertical-align:-2px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.lead{max-width:640px;color:var(--mut)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}
+.btn{display:inline-block;padding:12px 20px;border-radius:12px;font-weight:600;text-decoration:none;border:1px solid var(--bd);color:var(--tx);background:var(--surf);transition:.25s}
+.btn.p{background:linear-gradient(135deg,var(--ac),var(--ac2));color:#04121f;border:0;box-shadow:0 8px 30px var(--glow)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px var(--glow)}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;border:1px solid var(--bd);background:var(--surf);padding:6px 12px;border-radius:99px}
+.badge s{width:8px;height:8px;border-radius:50%;background:var(--ac2);text-decoration:none;animation:pu 1.8s infinite}
+@keyframes pu{0%{box-shadow:0 0 0 0 var(--ac2)}100%{box-shadow:0 0 0 10px transparent}}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:26px}
+@media(min-width:700px){.stats{grid-template-columns:repeat(4,1fr)}}
+.st{background:var(--surf);border:1px solid var(--bd);border-radius:16px;padding:16px}
+.st b{display:block;font-size:30px;color:var(--ac)}
+.st span{color:var(--mut);font-size:13px}
+.grid{display:grid;gap:14px;margin-top:22px}
+@media(min-width:760px){.grid.c2{grid-template-columns:1fr 1fr}.grid.c3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--surf);border:1px solid var(--bd);border-radius:18px;padding:20px;transition:transform .2s,border-color .25s,box-shadow .25s;position:relative;overflow:hidden}
+.card:hover{border-color:var(--ac);box-shadow:0 14px 40px var(--glow)}
+.card::after{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,var(--ac),var(--ac2));transform:scaleX(0);transform-origin:left;transition:.4s}
+.card:hover::after{transform:scaleX(1)}
+.card h3{margin:2px 0 8px;font-size:18px}
+.card p{margin:0 0 10px;color:var(--mut);font-size:15px}
+.meta{font-size:12px;color:var(--ac2)}
+.m{display:flex;gap:18px;margin:12px 0;flex-wrap:wrap}
+.m div b{display:block;font-size:22px;color:var(--ac)}
+.m div span{font-size:12px;color:var(--mut)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font-size:12px;padding:4px 10px;border-radius:99px;border:1px solid var(--bd);background:var(--bg);color:var(--mut);transition:.2s}
+.chips span:hover{color:var(--tx);border-color:var(--ac);transform:translateY(-2px)}
+.tl{border-left:2px solid var(--bd);margin:24px 0 0 6px;padding-left:20px}
+.ti{position:relative;margin-bottom:22px}
+.ti::before{content:"";position:absolute;left:-27px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--ac);box-shadow:0 0 0 5px var(--glow)}
+.ti h3{margin:0;font-size:17px}.ti p{margin:4px 0 0;color:var(--mut);font-size:15px}
+.cert{display:flex;gap:12px;align-items:flex-start}
+.cert i{font-style:normal;font-size:22px}
+.cert b{display:block;font-size:15px}.cert span{font-size:12px;color:var(--mut)}
+.term{background:#050810;color:#bfe8d4;border:1px solid var(--bd);border-radius:14px;padding:16px;margin-top:22px;font-size:14px;line-height:1.8}
+.term em{color:#3da5ff;font-style:normal}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.rv.on{opacity:1;transform:none}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:40px 16px calc(40px + env(safe-area-inset-bottom,0px))}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<canvas id="bg"></canvas>
+<nav>
+  <b>ST_</b>
+  <div class="l"><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#exp">Experience</a><a href="#certs">Certs</a><a href="#contact">Contact</a></div>
+  <button id="th" aria-label="Toggle theme">◐</button>
+</nav>
+<main>
+<section id="hero">
+  <span class="badge mono"><s></s>Open to work · India · On-site, Hybrid, Remote</span>
+  <p class="hi mono" style="margin-top:22px">&gt; hello, world. I’m</p>
+  <h1>Sahil Telote</h1>
+  <div class="ty mono"><span id="tw"></span><i></i></div>
+  <p class="lead">Entry-level cloud security and SOC analyst. I build tools that catch real attacks, from a honeypot that logged 1,200+ brute-force attempts to a multilingual phishing detector, and I write them up like an analyst would.</p>
+  <div class="btns">
+    <a class="btn p" href="#projects">View my work</a>
+    <a class="btn" href="mailto:sahiltelote744@gmail.com">Email me</a>
+    <a class="btn" href="https://www.linkedin.com/in/sahil-telote-2406b733b" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <div class="stats">
+    <div class="st"><b data-n="1200" data-s="+">0</b><span>attacks captured &amp; analyzed</span></div>
+    <div class="st"><b data-n="50" data-s="+">0</b><span>malware samples analyzed</span></div>
+    <div class="st"><b data-n="92" data-s="%">0</b><span>phishing detection accuracy</span></div>
+    <div class="st"><b data-n="17" data-s="">0</b><span>licenses &amp; certifications</span></div>
+  </div>
+</section>
+
+<section id="about" class="rv">
+  <p class="tag mono">// 01 about</p><h2>Who I am</h2>
+  <p class="lead" style="max-width:760px">Computer Engineering graduate (University of Mumbai, 2026) with hands-on experience in security operations, SIEM log analysis, alert triage, incident response, and cloud security posture across AWS and Google Cloud. I find and fix misconfigurations like insecure IAM, public buckets, and open firewall rules, and I’m familiar with ISO/IEC 27001 and PCI DSS. Currently resolving high-volume network incidents at Teleperformance while I move into a dedicated security role.</p>
+  <div class="chips" style="margin-top:14px"><span>SOC Operations</span><span>Incident Response</span><span>Cloud Security</span><span>Threat Detection</span><span>MITRE ATT&amp;CK</span><span>ISO 27001 Lead Auditor</span></div>
+</section>
+
+<section id="projects">
+  <p class="tag mono rv">// 02 projects</p><h2 class="rv">What I’ve built</h2>
+  <div class="grid c2">
+    <article class="card rv"><div class="meta mono">Personal · Apr 2026</div><h3>PhishGuard AI</h3>
+      <p>Multi-channel phishing and scam detection across SMS, email, WhatsApp, and an audio prototype. Flags OTP/PIN requests, urgency tactics, suspicious links, fake jobs, KYC fraud, and prize scams. Features a live dashboard, phrase highlighting, a 0–100 risk score with scam probability, threat tags, verify/block/report guidance, an offline-capable security coach, and Hindi, Marathi, Tamil, and English support.</p>
+      <div class="m"><div><b>92%</b><span>accuracy</span></div><div><b>500+</b><span>messages</span></div><div><b>&lt;8%</b><span>false positives</span></div></div>
+      <div class="chips"><span>Python</span><span>NLP</span><span>Risk scoring</span></div></article>
+    <article class="card rv"><div class="meta mono">Final-year project · Nov 2025</div><h3>SSH Honeypot</h3>
+      <p>Internet-exposed SSH honeypot with a fake shell that logs unauthorized logins and command executions and simulates system responses to deceive attackers. Analyzed origin, credential patterns, and session behavior; mapped commands to MITRE ATT&amp;CK (Initial Access, Execution, Persistence, Discovery); built a real-time Python logging and correlation pipeline; delivered an ISO 27001-aligned findings report.</p>
+      <div class="m"><div><b>1,200+</b><span>attempts</span></div><div><b>40+</b><span>command sequences</span></div><div><b>2 wks</b><span>window</span></div></div>
+      <div class="chips"><span>Python</span><span>Linux</span><span>SSH</span><span>MITRE ATT&amp;CK</span></div></article>
+    <article class="card rv"><div class="meta mono">Personal · Jan–Apr 2026</div><h3>Malware Analysis Sandbox</h3>
+      <p>Isolated Python and VirtualBox lab to safely detonate ransomware, trojans, RATs, and stealers, with automated VM orchestration. Static (PE headers, Ghidra, IDA Free) and dynamic (Procmon, Sysmon, Wireshark) analysis, custom YARA rules, and IoC extraction into JSON threat reports mapped to MITRE ATT&amp;CK with ISO 27001-aligned severity scores.</p>
+      <div class="m"><div><b>50+</b><span>samples</span></div><div><b>60%</b><span>faster analysis</span></div><div><b>15+</b><span>YARA rules</span></div></div>
+      <div class="chips"><span>Ghidra</span><span>Sysmon</span><span>Procmon</span><span>Wireshark</span><span>YARA</span></div></article>
+    <article class="card rv"><div class="meta mono">Google Cloud capstone · Jan 2026</div><h3>Cloud Incident Remediation &amp; PCI DSS</h3>
+      <p>Simulated and remediated a GCP incident end to end: exposed storage, open firewall rules, and unprotected VMs. Shielded VMs, uniform bucket access, and a runbook validated in Security Command Center.</p>
+      <div class="m"><div><b>3</b><span>critical fixes</span></div><div><b>PCI DSS</b><span>3.2.1 aligned</span></div></div>
+      <div class="chips"><span>GCP</span><span>IAM</span><span>Security Command Center</span><span>Cloud Logging</span><span>PCI DSS 3.2.1</span></div></article>
+    <article class="card rv" style="grid-column:1/-1"><div class="meta mono">Final-year project · Jan–Mar 2026</div><h3>AI-Integrated Landmine Detection Robot</h3>
+      <p>An ESP32/Arduino robot with an ML classifier that turns sensor data into a detection probability score from 0 to 100%. Combines embedded hardware, sensor data processing, and machine learning.</p>
+      <div class="m"><div><b>0–100%</b><span>detection probability</span></div><div><b>ESP32</b><span>Arduino hardware</span></div></div>
+      <div class="chips"><span>ESP32</span><span>Arduino</span><span>Machine learning</span><span>Sensor data</span><span>Embedded systems</span></div></article>
+  </div>
+</section>
+
+<section id="skills">
+  <p class="tag mono rv">// 03 toolkit</p><h2 class="rv">Skills</h2>
+  <div class="grid c3">
+    <div class="card rv"><h3>☁️ Cloud</h3><div class="chips"><span>AWS IAM</span><span>CloudTrail</span><span>GuardDuty</span><span>GCP SCC</span><span>Cloud Logging</span><span>Misconfig remediation</span><span>AWS EC2</span><span>AWS S3</span><span>AWS WAF</span><span>VM hardening</span><span>CSPM</span><span>Shielded VMs</span><span>Cloud Storage access control</span></div></div>
+    <div class="card rv"><h3>🛡️ SOC &amp; IR</h3><div class="chips"><span>Splunk (lab)</span><span>Alert triage</span><span>Escalation</span><span>Root cause analysis</span><span>ITIL v4</span><span>ServiceNow</span><span>Jira</span><span>Triage &amp; prioritization</span><span>Post-incident reporting</span><span>SIEM correlation rules</span><span>Threat hunting</span><span>Threat intelligence</span><span>MITRE ATT&amp;CK</span></div></div>
+    <div class="card rv"><h3>🔬 Analysis</h3><div class="chips"><span>YARA</span><span>Ghidra</span><span>Sysmon</span><span>Wireshark</span><span>Nmap</span><span>Nessus</span><span>IoC extraction</span><span>IDA Free</span><span>Procmon</span><span>Static analysis</span><span>Dynamic analysis</span><span>Pattern recognition</span><span>Anomaly detection</span></div></div>
+    <div class="card rv"><h3>💻 Scripting</h3><div class="chips"><span>Python</span><span>Bash</span><span>Log parsing</span><span>NLP</span><span>Automation</span><span>Structured logging</span><span>Risk scoring</span><span>Pipeline engineering</span><span>JSON reporting</span></div></div>
+    <div class="card rv"><h3>📋 Compliance</h3><div class="chips"><span>ISO/IEC 27001:2022</span><span>PCI DSS 3.2.1</span><span>Risk assessment</span><span>Audit documentation</span><span>ISMS</span><span>Threat modeling</span><span>Security governance</span><span>Remediation runbooks</span></div></div>
+    <div class="card rv"><h3>🌐 Networking</h3><div class="chips"><span>TCP/IP</span><span>DNS</span><span>DHCP</span><span>VPN</span><span>Active Directory</span><span>Firewalls</span><span>Network segmentation</span><span>Kerberos</span><span>Group Policy</span><span>Linux &amp; Kali</span><span>SSH</span><span>HTTP/HTTPS</span></div></div>
+  </div>
+</section>
+
+<section id="exp">
+  <p class="tag mono rv">// 04 journey</p><h2 class="rv">Experience &amp; education</h2>
+  <div class="tl">
+    <div class="ti rv"><div class="meta mono">Jun 2026 – Present</div><h3>Technical Support Expert (L1), Teleperformance</h3><p>Resolving high-volume TCP/IP, DNS, DHCP, and Wi-Fi incidents. Reading event logs to isolate root causes, escalating to L2/L3 with precise handoff notes, and following account-verification procedures. Applying account-protection practices: password governance, access troubleshooting, OS patching, and endpoint hygiene, with ITSM workflows.</p></div>
+    <div class="ti rv"><div class="meta mono">Jul 2025 · Forage</div><h3>Deloitte Australia, Cyber Job Simulation</h3><p>SIEM log analysis (Splunk-style), alert triage, and incident response within an ISO/IEC 27001 framework. Cloud security posture review, risk assessment, and reporting for non-technical stakeholders.</p></div>
+    <div class="ti rv"><div class="meta mono">Jun 2025 · Forage</div><h3>Mastercard, Cybersecurity Job Simulation</h3><p>Investigated security alerts, analyzed logs for anomalous activity, applied structured escalation workflows, and wrote ServiceNow-style remediation documentation.</p></div>
+    <div class="ti rv"><div class="meta mono">Jan 2025 · Forage</div><h3>Tata Group, Cybersecurity Analyst Job Simulation</h3><p>Ran vulnerability scans on simulated enterprise environments and documented remediation steps, with exposure to the vulnerability-management lifecycle and Jira-style issue tracking.</p></div>
+    <div class="ti rv"><div class="meta mono">Nov 2022 – 2026</div><h3>B.E. Computer Engineering, University of Mumbai</h3><p>CGPA 7.45/10. Final-year projects: SSH Honeypot and an AI-integrated landmine detection robot (ESP32/Arduino with an ML classifier).</p></div>
+    <div class="ti rv"><div class="meta mono">Aug 2019 – Aug 2021</div><h3>High School Diploma, Computer Science, Somalwar High School</h3><p>Grade: A.</p></div>
+    <div class="ti rv"><div class="meta mono">Languages &amp; next steps</div><h3>English · Hindi (full professional) · Marathi (native)</h3><p>Currently preparing for CISA (ISACA).</p></div>
+  </div>
+</section>
+
+<section id="certs">
+  <p class="tag mono rv">// 05 credentials</p><h2 class="rv">Certifications</h2>
+  <div class="grid c3">
+    <div class="card rv cert"><i>🎖️</i><div><b>ISO/IEC 27001:2022 Lead Auditor</b><span>Mastermind · Dec 2025</span></div></div>
+    <div class="card rv cert"><i>🔐</i><div><b>Ethical Hacker</b><span>Cisco Networking Academy · May 2026</span></div></div>
+    <div class="card rv cert"><i>☁️</i><div><b>Google Cloud Cybersecurity Certificate</b><span>Google Cloud · Jan 2026</span></div></div>
+    <div class="card rv cert"><i>🧠</i><div><b>Certified Threat Intelligence &amp; Governance Analyst</b><span>Red Team Leaders · Jan 2026</span></div></div>
+    <div class="card rv cert"><i>🐍</i><div><b>Python for Defensive Security</b><span>Red Team Leaders · Feb 2026</span></div></div>
+    <div class="card rv cert"><i>🤖</i><div><b>Cisco AI Technical Practitioner</b><span>Cisco · Mar 2026</span></div></div>
+    <div class="card rv cert"><i>🚨</i><div><b>Detect, Respond &amp; Recover from Cloud Attacks</b><span>Google · Jan 2026</span></div></div>
+    <div class="card rv cert"><i>🧩</i><div><b>Threat Modeling in Cybersecurity</b><span>nasscom · Dec 2025</span></div></div>
+    <div class="card rv cert"><i>🛡️</i><div><b>Cybersecurity Fundamentals</b><span>IBM · Feb 2025</span></div></div>
+    <div class="card rv cert"><i>🏗️</i><div><b>Cyber Security Architecture v1</b><span>Red Team Leaders · Jan 2026</span></div></div>
+    <div class="card rv cert"><i>🎯</i><div><b>Certified Red Team Operations Management (CRTOM)</b><span>Red Team Leaders · Dec 2025</span></div></div>
+    <div class="card rv cert"><i>📊</i><div><b>Strategies for Cloud Security Risk Management</b><span>Google · Sep 2025</span></div></div>
+    <div class="card rv cert"><i>🐧</i><div><b>Linux Challenges</b><span>KodeKloud · Aug 2025</span></div></div>
+    <div class="card rv cert"><i>🔒</i><div><b>Introduction to Security Principles in Cloud Computing</b><span>Google · Aug 2025</span></div></div>
+    <div class="card rv cert"><i>🔷</i><div><b>Deloitte Australia, Cyber Job Simulation</b><span>Forage · Jul 2025</span></div></div>
+    <div class="card rv cert"><i>💳</i><div><b>Mastercard, Cybersecurity Job Simulation</b><span>Forage · Jun 2025</span></div></div>
+    <div class="card rv cert"><i>🏢</i><div><b>Tata Group, Cybersecurity Analyst Job Simulation</b><span>Forage · Jan 2025</span></div></div>
+  </div>
+  <p class="rv" style="color:var(--mut);font-size:14px;margin-top:14px">All 17 licenses and certifications from my LinkedIn profile. <a href="https://credly.com/users/sahiltelote" target="_blank" rel="noopener" style="color:var(--ac)">Verify on Credly →</a></p>
+</section>
+
+<section id="contact">
+  <p class="tag mono rv">// 06 contact</p><h2 class="rv">Let’s talk</h2>
+  <p class="lead rv">I’m looking for Junior SOC Analyst, Cloud Security Analyst, or Security Operations roles.</p>
+  <div class="btns rv">
+    <a class="btn p" href="mailto:sahiltelote744@gmail.com">sahiltelote744@gmail.com</a>
+    <a class="btn" href="tel:+918788140976">+91 87881 40976</a>
+    <a class="btn" href="https://github.com/sahil2022rt" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="https://credly.com/users/sahiltelote" target="_blank" rel="noopener">Credly</a>
+    <a class="btn" href="https://www.linkedin.com/in/sahil-telote-2406b733b" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <div class="term mono rv">
+    <div><em>sahil@secops:~$</em> whoami</div><div>sahil-telote</div>
+    <div><em>sahil@secops:~$</em> cat status.txt</div><div>🟢 open to opportunities · Mumbai, India</div>
+    <div><em>sahil@secops:~$</em> ./hire_me.sh</div><div>Starting secure onboarding… ✔</div>
+  </div>
+</section>
+</main>
+<footer class="mono">© 2026 Sahil Ravindra Telote · Built with care for security</footer>
+
+<script>
+(function(){
+  var r=document.documentElement,b=document.getElementById('th');
+  b.onclick=function(){var d=getComputedStyle(r).colorScheme==='dark';r.setAttribute('data-theme',d?'light':'dark');col()};
+  // typing
+  var w=['Cloud Security Analyst','Junior SOC Analyst','Incident Response','Threat Detection'],i=0,j=0,del=false,t=document.getElementById('tw');
+  (function tick(){var s=w[i];t.textContent=s.slice(0,j);if(!del&&j<s.length){j++;setTimeout(tick,70)}else if(!del){del=true;setTimeout(tick,1400)}else if(j>0){j--;setTimeout(tick,35)}else{del=false;i=(i+1)%w.length;setTimeout(tick,300)}})();
+  // reveal + counters
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el,k){el.style.transitionDelay=(k%4)*70+'ms';io.observe(el)});
+  var co=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;co.unobserve(e.target);var el=e.target,n=+el.dataset.n,s=el.dataset.s,st=performance.now();(function f(now){var p=Math.min((now-st)/1400,1);el.textContent=Math.round(n*(1-Math.pow(1-p,3))).toLocaleString()+(p>=1?s:'');if(p<1)requestAnimationFrame(f)})(st)})});
+  document.querySelectorAll('[data-n]').forEach(function(el){co.observe(el)});
+  // network canvas
+  var c=document.getElementById('bg'),x=c.getContext('2d'),P=[],W,H,rgb='61,165,255';
+  function col(){var h=getComputedStyle(r).getPropertyValue('--ac').trim();if(h[0]=='#'){rgb=[1,3,5].map(function(k){return parseInt(h.substr(k,2),16)}).join(',')}}
+  function sz(){W=c.width=innerWidth;H=c.height=innerHeight;P=[];var n=Math.min(70,Math.floor(W*H/16000));for(var k=0;k<n;k++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4})}
+  function draw(){x.clearRect(0,0,W,H);for(var a=0;a<P.length;a++){var p=P[a];p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;x.fillStyle='rgba('+rgb+',.9)';x.fillRect(p.x,p.y,2,2);for(var d=a+1;d<P.length;d++){var q=P[d],dx=p.x-q.x,dy=p.y-q.y,m=dx*dx+dy*dy;if(m<14000){x.strokeStyle='rgba('+rgb+','+(1-m/14000)*.35+')';x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}}requestAnimationFrame(draw)}
+  addEventListener('resize',sz);col();sz();draw();
+  matchMedia('(prefers-color-scheme:dark)').addEventListener&&matchMedia('(prefers-color-scheme:dark)').addEventListener('change',function(){setTimeout(col,50)});
+})();
+</script>
+</body>
+</html>
